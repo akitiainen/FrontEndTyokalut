@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c2b8cf66-7416-456f-8051-e8b5b7e70e48" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/e2e/tsconfig.e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/src/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TESTIPROJEKTI/tslint.json" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Ss2OuETtbBEidmMLREqAeVPI5n" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c2b8cf66-7416-456f-8051-e8b5b7e70e48" name="Default Changelist" comment="" />
+      <created>1572337954511</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1572337954511</updated>
+      <workItem from="1572337957927" duration="31000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
