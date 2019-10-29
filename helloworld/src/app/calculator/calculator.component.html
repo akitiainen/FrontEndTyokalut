@@ -1,3 +1,9 @@
-<p>
-  calculator works!
-</p>
+
+<div class="container">
+  <input>
+  <mat-grid-list cols="4" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let button of buttons">
+      <button mat-raised-button color="primary">{{button}}</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

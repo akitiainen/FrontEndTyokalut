@@ -1,0 +1,9 @@
+.container {
+  height: 50vh;
+  width: 20vw;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 20vh;
+  background-color: powderblue;
+}
