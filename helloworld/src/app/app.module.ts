@@ -4,18 +4,21 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { AppRoutingModule } from './app-routing.module';
-import {MatButtonModule, MatGridListModule} from '@angular/material';
+import {MatButtonModule, MatGridListModule, MatSliderModule} from '@angular/material';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatGridListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
