@@ -6,12 +6,14 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { AppRoutingModule } from './app-routing.module';
 import {MatButtonModule, MatGridListModule, MatSliderModule} from '@angular/material';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalculatorComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
