@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Person} from './person';
+import {FormControl, FormGroup} from '@angular/forms';
+import {first} from 'rxjs/operators';
 
 @Component({
   selector: 'app-form',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  person: Person;
+
+  form = new FormGroup({
+    firstName: new FormControl('')
+  });
+
+  constructor() {
+    this.person = new Person();
+  }
 
   ngOnInit() {
   }
+
+  onSave() {}
 
 }

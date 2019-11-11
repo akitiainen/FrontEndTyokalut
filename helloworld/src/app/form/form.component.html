@@ -1,3 +1,15 @@
-<p>
-  form works!
-</p>
+<div class="container">
+  <mat-card>
+    <mat-form-field [formGroup]="form" (ngSubmit)="form.valid && onSave()">
+      <input matInput [(ngModel)]="person.firstName"
+             type="text"
+             id="firstName"
+             formControlName="firstName"
+             required minlength="2"
+             [ngClass]="{'is-invalid': form.get('firstName').touched && form.get('firstName').invalid}">
+    </mat-form-field>
+    <button mat-fab class="checkButton" (click)="onSave()" [disabled]="!form.valid">
+      <i class="material-icons">check</i>
+    </button>
+  </mat-card>
+</div>

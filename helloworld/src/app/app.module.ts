@@ -4,9 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { AppRoutingModule } from './app-routing.module';
-import {MatButtonModule, MatGridListModule, MatSliderModule} from '@angular/material';
+import {MatButtonModule, MatCardModule, MatFormFieldModule, MatGridListModule, MatInputModule, MatSliderModule} from '@angular/material';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { FormComponent } from './form/form.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,16 @@ import { FormComponent } from './form/form.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     MatGridListModule,
     MatButtonModule,
-    MatSliderModule
+    MatSliderModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
