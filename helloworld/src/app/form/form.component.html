@@ -1,15 +1,73 @@
 <div class="container">
   <mat-card>
-    <mat-form-field [formGroup]="form" (ngSubmit)="form.valid && onSave()">
+    <form (ngSubmit)="onSave(personForm)" #personForm="ngForm">
+    <div>
+      <p>First name</p>
+      <mat-form-field>
       <input matInput [(ngModel)]="person.firstName"
              type="text"
              id="firstName"
-             formControlName="firstName"
-             required minlength="2"
-             [ngClass]="{'is-invalid': form.get('firstName').touched && form.get('firstName').invalid}">
-    </mat-form-field>
-    <button mat-fab class="checkButton" (click)="onSave()" [disabled]="!form.valid">
+             name="firstName"
+             ngModel required
+             pattern="([A-zÀ-ž\s]){2,}">
+      </mat-form-field>
+    </div>
+    <div>
+      <p>Last name</p>
+      <mat-form-field>
+      <input matInput [(ngModel)]="person.lastName"
+             type="text"
+             id="lastName"
+             name="lastName"
+             ngModel required
+             pattern="([A-zÀ-ž\s]){2,}">
+      </mat-form-field>
+    </div>
+    <div>
+      <p>Email</p>
+      <mat-form-field>
+      <input matInput [(ngModel)]="person.email"
+             type="text"
+             id="email"
+             name="email"
+             ngModel required
+             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+      </mat-form-field>
+    </div>
+    <div>
+      <p>Password</p>
+      <mat-form-field>
+      <input matInput [(ngModel)]="person.password"
+             [type]="hide ? 'password' : 'text'"
+             id="password"
+             name="password"
+             ngModel required
+             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+      </mat-form-field>
+      <div>
+        <p></p>
+      </div>
+    </div>
+      <div>
+        <p>Confirm password</p>
+        <mat-form-field>
+          <input matInput
+                 type="text"
+                 id="passwordConfirm"
+                 name="passwordConfirm"
+                 ngModel required
+                 pattern="{{person.password}}">
+        </mat-form-field>
+      </div>
+    <div>
+      <input type="checkbox"
+             id="termsAndConditions"
+             name="termsAndConditions"
+             ngModel required>
+    </div>
+    <button mat-fab class="checkButton" type="submit" (click)="onSave(personForm)" [disabled]="!personForm.valid">
       <i class="material-icons">check</i>
     </button>
+    </form>
   </mat-card>
 </div>
