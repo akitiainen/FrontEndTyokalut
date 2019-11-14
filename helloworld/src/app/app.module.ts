@@ -9,13 +9,15 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { FormComponent } from './form/form.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalculatorComponent,
     FeedbackComponent,
-    FormComponent
+    FormComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
