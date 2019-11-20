@@ -1,72 +1,121 @@
 <div class="container">
   <mat-card>
     <form (ngSubmit)="onSave(personForm)" #personForm="ngForm">
-    <div>
+    <div class="form-field">
+      <div>
       <p>First name</p>
       <mat-form-field>
       <input matInput [(ngModel)]="person.firstName"
              type="text"
              id="firstName"
              name="firstName"
+             placeholder="first name"
+             #firstName="ngModel"
              ngModel required
-             pattern="([A-zÀ-ž\s]){2,}">
+             pattern="([A-zÀ-ž\s-]){2,}">
       </mat-form-field>
+      </div>
+      <div *ngIf="firstName.invalid && firstName.dirty" class="error-message">
+        <p *ngIf="firstName.invalid">Name is too short or has invalid characters</p>
+      </div>
     </div>
-    <div>
+    <div class="form-field">
+      <div>
       <p>Last name</p>
       <mat-form-field>
       <input matInput [(ngModel)]="person.lastName"
              type="text"
              id="lastName"
              name="lastName"
+             #lastName="ngModel"
              ngModel required
              pattern="([A-zÀ-ž\s]){2,}">
       </mat-form-field>
+      </div>
+      <div *ngIf="lastName.invalid && lastName.dirty" class="error-message">
+        <p *ngIf="lastName.invalid">Name is too short or has invalid characters</p>
+      </div>
     </div>
-    <div>
+      <div class="form-field">
+        <div>
+        <p>Username</p>
+        <mat-form-field>
+          <input matInput [(ngModel)]="person.id"
+                 type="text"
+                 id="personId"
+                 name="personId"
+                 #personId="ngModel"
+                 ngModel required
+                 pattern="([A-z0-9\s-_]{5,})">
+        </mat-form-field>
+        </div>
+        <div *ngIf="personId.invalid && personId.dirty" class="error-message">
+          <p *ngIf="personId.invalid">Username has invalid characters</p>
+        </div>
+      </div>
+    <div class="form-field">
+      <div>
       <p>Email</p>
       <mat-form-field>
       <input matInput [(ngModel)]="person.email"
              type="text"
              id="email"
              name="email"
+             #email="ngModel"
              ngModel required
              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
       </mat-form-field>
+      </div>
+      <div *ngIf="email.invalid && email.dirty" class="error-message">
+        <p *ngIf="email.invalid">Email is in wrong format or has invalid characters</p>
+      </div>
     </div>
-    <div>
+    <div class="form-field">
+      <div>
       <p>Password</p>
       <mat-form-field>
       <input matInput [(ngModel)]="person.password"
-             [type]="hide ? 'password' : 'text'"
+             type="password"
              id="password"
              name="password"
+             #password="ngModel"
              ngModel required
-             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}">
       </mat-form-field>
-      <div>
-        <p></p>
+      </div>
+      <div *ngIf="password.invalid && password.dirty" class="error-message">
+        <p *ngIf="password.invalid">Password is too short or has invalid characters</p>
       </div>
     </div>
-      <div>
+      <div class="form-field">
+        <div>
         <p>Confirm password</p>
         <mat-form-field>
           <input matInput
-                 type="text"
+                 type="password"
                  id="passwordConfirm"
                  name="passwordConfirm"
+                 #passwordConfirm="ngModel"
                  ngModel required
-                 pattern="{{person.password}}">
+                 pattern="{{password.value}}">
         </mat-form-field>
+        </div>
+        <div *ngIf="passwordConfirm.invalid && passwordConfirm.dirty" class="error-message">
+          <p *ngIf="passwordConfirm.value !== password.value">Passwords do not match</p>
+        </div>
       </div>
     <div>
       <input type="checkbox"
              id="termsAndConditions"
              name="termsAndConditions"
+             #termsAndConditions="ngModel"
              ngModel required>
+      <div *ngIf="termsAndConditions.invalid && (termsAndConditions.touched || termsAndConditions.dirty)" class="error-message">
+        <p *ngIf="termsAndConditions.hasError('required')">Accept terms and conditions</p>
+      </div>
     </div>
-    <button mat-fab class="checkButton" type="submit" (click)="onSave(personForm)" [disabled]="!personForm.valid">
-      <i class="material-icons">check</i>
+    <button mat-icon-button class="checkButton" type="submit" (click)="onSave(personForm)" [disabled]="!personForm.valid">
+      <i class="material-icons">check_circle_outline</i>
     </button>
     </form>
   </mat-card>

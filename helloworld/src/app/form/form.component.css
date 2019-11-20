@@ -4,3 +4,12 @@
   transform: translate(-50%);
   min-width: 50vw;
 }
+
+.form-field {
+  display: flex;
+  flex-direction: row;
+}
+
+.error-message {
+  color: red;
+}
