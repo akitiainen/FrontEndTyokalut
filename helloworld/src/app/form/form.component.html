@@ -79,7 +79,8 @@
              id="password"
              name="password"
              #password="ngModel"
-             ngModel required
+             ngModel
+             required minlength="10"
              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}">
       </mat-form-field>
       </div>
