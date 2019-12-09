@@ -1,3 +1,23 @@
-<p>
-  finnkino works!
-</p>
+<div id="title"><h1>Finnkino uutisia</h1></div>
+<mat-form-field>
+  <input matInput
+         placeholder="Hae"
+          [(ngModel)]="searchTerm">
+</mat-form-field>
+
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let item of cinemaData$ | async | searchFilter: searchTerm">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{item.PublishDate | date: 'd.M.yyyy'}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{item.Title}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="content-container">
+      <div class="img-container"><img src="{{item.ImageURL}}"></div>
+      <div class="text-container">{{item.HTMLLead}}</div>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

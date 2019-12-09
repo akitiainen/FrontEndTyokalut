@@ -6,10 +6,10 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { AppRoutingModule } from './app-routing.module';
 import {
   MatButtonModule,
-  MatCardModule,
+  MatCardModule, MatExpansionModule,
   MatFormFieldModule,
   MatGridListModule,
-  MatInputModule,
+  MatInputModule, MatSidenavModule,
   MatSliderModule,
   MatToolbarModule
 } from '@angular/material';
@@ -20,6 +20,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ToolbarComponent } from './ui/toolbar/toolbar.component';
 import { FinnkinoComponent } from './finnkino/finnkino.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { SearchFilterPipe } from './pipes/search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { FinnkinoComponent } from './finnkino/finnkino.component';
     FormComponent,
     PageNotFoundComponent,
     ToolbarComponent,
-    FinnkinoComponent
+    FinnkinoComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,10 @@ import { FinnkinoComponent } from './finnkino/finnkino.component';
     FormsModule,
     ReactiveFormsModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSidenavModule,
+    MatExpansionModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
