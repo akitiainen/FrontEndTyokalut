@@ -8,7 +8,7 @@ import {
   MatButtonModule,
   MatCardModule, MatExpansionModule,
   MatFormFieldModule,
-  MatGridListModule,
+  MatGridListModule, MatIconModule,
   MatInputModule, MatSidenavModule,
   MatSliderModule,
   MatToolbarModule
@@ -22,6 +22,8 @@ import { ToolbarComponent } from './ui/toolbar/toolbar.component';
 import { FinnkinoComponent } from './finnkino/finnkino.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
+import { AdminComponent } from './admin/admin.component';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { SearchFilterPipe } from './pipes/search-filter.pipe';
     PageNotFoundComponent,
     ToolbarComponent,
     FinnkinoComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    AdminComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,8 @@ import { SearchFilterPipe } from './pipes/search-filter.pipe';
     MatToolbarModule,
     MatSidenavModule,
     MatExpansionModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
