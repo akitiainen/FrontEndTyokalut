@@ -1,5 +1,5 @@
-<div class="container">
-  <mat-card>
+
+  <mat-card class="container">
     <form (ngSubmit)="onSave(personForm)" #personForm="ngForm">
     <div class="form-field">
       <div>
@@ -12,11 +12,13 @@
              placeholder="first name"
              #firstName="ngModel"
              ngModel required
-             pattern="([A-zÀ-ž\s-]){2,}">
+             minlength="2"
+             pattern="([A-zÀ-ž\s-])">
       </mat-form-field>
       </div>
       <div *ngIf="firstName.invalid && firstName.dirty" class="error-message">
-        <p *ngIf="firstName.invalid">Name is too short or has invalid characters</p>
+        <p *ngIf="firstName.hasError('pattern')">Name has invalid characters</p>
+        <p *ngIf="firstName.hasError('minlength')">Name is too short</p>
       </div>
     </div>
     <div class="form-field">
@@ -29,11 +31,13 @@
              name="lastName"
              #lastName="ngModel"
              ngModel required
-             pattern="([A-zÀ-ž\s]){2,}">
+             minlength="2"
+             pattern="([A-zÀ-ž\s])">
       </mat-form-field>
       </div>
       <div *ngIf="lastName.invalid && lastName.dirty" class="error-message">
-        <p *ngIf="lastName.invalid">Name is too short or has invalid characters</p>
+        <p *ngIf="lastName.hasError('pattern')">Name has invalid characters</p>
+        <p *ngIf="lastName.hasError('minlength')">Name is too short</p>
       </div>
     </div>
       <div class="form-field">
@@ -85,7 +89,8 @@
       </mat-form-field>
       </div>
       <div *ngIf="password.invalid && password.dirty" class="error-message">
-        <p *ngIf="password.invalid">Password is too short or has invalid characters</p>
+        <p *ngIf="password.hasError('pattern')">Password has invalid characters</p>
+        <p *ngIf="password.hasError('minglength')"></p>
       </div>
     </div>
       <div class="form-field">
@@ -120,4 +125,4 @@
     </button>
     </form>
   </mat-card>
-</div>
+

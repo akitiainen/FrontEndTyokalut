@@ -6,10 +6,10 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { AppRoutingModule } from './app-routing.module';
 import {
   MatButtonModule,
-  MatCardModule, MatExpansionModule,
+  MatCardModule, MatDialogModule, MatExpansionModule,
   MatFormFieldModule,
   MatGridListModule, MatIconModule,
-  MatInputModule, MatSidenavModule,
+  MatInputModule, MatMenuModule, MatSidenavModule,
   MatSliderModule,
   MatToolbarModule
 } from '@angular/material';
@@ -24,6 +24,12 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { AdminComponent } from './admin/admin.component';
 import { AuthComponent } from './auth/auth.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+
+export interface DialogData {
+  email: string;
+  password: string;
+}
 
 @NgModule({
   declarations: [
@@ -36,7 +42,8 @@ import { AuthComponent } from './auth/auth.component';
     FinnkinoComponent,
     SearchFilterPipe,
     AdminComponent,
-    AuthComponent
+    AuthComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +61,9 @@ import { AuthComponent } from './auth/auth.component';
     MatSidenavModule,
     MatExpansionModule,
     HttpClientModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
