@@ -1,4 +1,7 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
+import {Router} from '@angular/router';
+import {MatDialog, MatMenuTrigger} from '@angular/material';
+import {AuthComponent} from '../../auth/auth.component';
 
 @Component({
   selector: 'app-toolbar',
@@ -6,16 +9,34 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./toolbar.component.css']
 })
 export class ToolbarComponent implements OnInit {
-  @Output() menuClick: EventEmitter<any>;
 
-  constructor() {
-    this.menuClick = new EventEmitter<any>();
+  password: string;
+  email: string;
+
+  constructor(private router: Router, public dialog: MatDialog) {
   }
 
   ngOnInit() {
   }
 
-  openSidenav() {
-    this.menuClick.emit();
+  signIn() {
+    // this.router.navigate(['/login']);
+    const dialogRef = this.dialog.open(AuthComponent, {
+      width: '500px',
+      data: {email: this.email, password: this.password}
+    });
+  }
+
+  goCalculator() {
+    this.router.navigate(['/calculator']);
+  }
+  goForm() {
+    this.router.navigate(['/form']);
+  }
+  goReactive() {
+    this.router.navigate(['/reactive']);
+  }
+  goFinnkino() {
+    this.router.navigate(['/finnkino']);
   }
 }

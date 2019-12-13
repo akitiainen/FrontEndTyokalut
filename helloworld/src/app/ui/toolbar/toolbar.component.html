@@ -1,5 +1,14 @@
 <mat-toolbar>
-  <button mat-icon-button (click)="openSidenav()">
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="goCalculator()">Calculator</button>
+    <button mat-menu-item (click)="goForm()">Form</button>
+    <button mat-menu-item (click)="goReactive()">Reactive Form</button>
+    <button mat-menu-item (click)="goFinnkino()">Finnkino</button>
+  </mat-menu>
+  <button mat-icon-button [mat-menu-trigger-for]="menu">
     <i class="material-icons">menu</i>
+  </button>
+  <button mat-raised-button (click)="signIn()" class="sign-in-button">
+    SIGN IN
   </button>
 </mat-toolbar>

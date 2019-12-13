@@ -1,13 +1,4 @@
-#title{
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-}
-
-mat-accordion {
-  margin-top: 2vh;
-}
-
-.content-container {
-  float: left;
+.sign-in-button {
+  position: relative;
+  left: 91%;
 }
