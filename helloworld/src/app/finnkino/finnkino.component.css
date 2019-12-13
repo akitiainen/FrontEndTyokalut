@@ -1,0 +1,22 @@
+.background {
+  padding-top: 3vh;
+  background-color: skyblue;
+  height: 100vh;
+}
+
+#title{
+  text-align: center;
+}
+
+.accordion-container{
+  margin-top: 2vh;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.text-container {
+  padding-left: 10px;
+}
