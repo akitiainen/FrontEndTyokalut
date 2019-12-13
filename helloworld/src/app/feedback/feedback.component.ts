@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Question} from './question';
+import {QuestionsService} from '../services/questions.service';
 
 @Component({
   selector: 'app-feedback',
@@ -6,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./feedback.component.css']
 })
 export class FeedbackComponent implements OnInit {
+  questions: Question[];
+  value: number;
 
-  constructor() { }
+  constructor(private questionService: QuestionsService) {
+    this.questions = this.questionService.getQuestions();
+  }
 
   ngOnInit() {
   }

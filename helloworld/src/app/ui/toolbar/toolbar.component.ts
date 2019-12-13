@@ -28,15 +28,18 @@ export class ToolbarComponent implements OnInit {
   }
 
   goCalculator() {
-    this.router.navigate(['/calculator']);
+    this.router.navigate(['calculator']);
   }
   goForm() {
-    this.router.navigate(['/form']);
+    this.router.navigate(['form']);
   }
   goReactive() {
-    this.router.navigate(['/reactive']);
+    this.router.navigate(['reactive']);
   }
   goFinnkino() {
-    this.router.navigate(['/finnkino']);
+    this.router.navigate(['finnkino']);
+  }
+  goFeedback() {
+    this.router.navigate(['feedback']);
   }
 }

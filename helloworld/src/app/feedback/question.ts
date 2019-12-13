@@ -12,7 +12,18 @@ export class Question {
     this.answer = 'Ei vielä arvosteltu';
   }
 
-  setFeedback() {
-
+  setFeedback(value: number) {
+    if (value === 0) {
+      this.answer = 'Ei vielä arvosteltu';
+    }
+    if (value === 1) {
+      this.answer = this.values[0];
+    }
+    if (value === 2) {
+      this.answer = this.values[1];
+    }
+    if (value === 3) {
+      this.answer = this.values[2];
+    }
   }
 }

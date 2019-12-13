@@ -25,6 +25,7 @@ import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { AdminComponent } from './admin/admin.component';
 import { AuthComponent } from './auth/auth.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import 'hammerjs';
 
 export interface DialogData {
   email: string;

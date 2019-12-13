@@ -5,7 +5,6 @@ import {Question} from '../feedback/question';
   providedIn: 'root'
 })
 export class QuestionsService {
-
   questions: Array<Question>;
 
   constructor() {

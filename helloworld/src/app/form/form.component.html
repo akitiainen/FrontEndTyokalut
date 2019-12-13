@@ -13,7 +13,7 @@
              #firstName="ngModel"
              ngModel required
              minlength="2"
-             pattern="([A-zÀ-ž\s-])">
+             pattern="([A-zÀ-ž\s-]){2,}">
       </mat-form-field>
       </div>
       <div *ngIf="firstName.invalid && firstName.dirty" class="error-message">
@@ -32,7 +32,7 @@
              #lastName="ngModel"
              ngModel required
              minlength="2"
-             pattern="([A-zÀ-ž\s])">
+             pattern="([A-zÀ-ž\s]){2,}">
       </mat-form-field>
       </div>
       <div *ngIf="lastName.invalid && lastName.dirty" class="error-message">

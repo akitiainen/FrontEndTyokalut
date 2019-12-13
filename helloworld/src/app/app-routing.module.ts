@@ -8,11 +8,13 @@ import {FinnkinoComponent} from './finnkino/finnkino.component';
 import {AuthComponent} from './auth/auth.component';
 import {AdminComponent} from './admin/admin.component';
 import {ReactiveFormComponent} from './reactive-form/reactive-form.component';
+import {FeedbackComponent} from './feedback/feedback.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/calculator', pathMatch: 'full'},
   {path: 'calculator', component: CalculatorComponent},
   {path: 'form', component: FormComponent},
+  {path: 'feedback', component: FeedbackComponent},
   {path: 'reactive', component: ReactiveFormComponent},
   {path: 'finnkino', component: FinnkinoComponent},
   {path: 'login', component: AuthComponent},

@@ -1,3 +1,5 @@
-<p>
-  feedback works!
-</p>
+<section *ngFor="let question of questions">
+  <div>{{question.title}}</div>
+<mat-slider min="0" max="3" step="1" [(ngModel)]="value" (change)="question.setFeedback(value)"></mat-slider>
+  <div>{{question.answer}}</div>
+</section>
