@@ -42,4 +42,7 @@ export class ToolbarComponent implements OnInit {
   goFeedback() {
     this.router.navigate(['feedback']);
   }
+  goConverter() {
+    this.router.navigate(['converter']);
+  }
 }

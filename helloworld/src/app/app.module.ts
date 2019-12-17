@@ -26,6 +26,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AuthComponent } from './auth/auth.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import 'hammerjs';
+import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
 
 export interface DialogData {
   email: string;
@@ -44,7 +45,8 @@ export interface DialogData {
     SearchFilterPipe,
     AdminComponent,
     AuthComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    CurrencyConverterComponent
   ],
   imports: [
     BrowserModule,

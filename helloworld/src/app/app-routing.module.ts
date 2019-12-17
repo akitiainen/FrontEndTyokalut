@@ -9,6 +9,7 @@ import {AuthComponent} from './auth/auth.component';
 import {AdminComponent} from './admin/admin.component';
 import {ReactiveFormComponent} from './reactive-form/reactive-form.component';
 import {FeedbackComponent} from './feedback/feedback.component';
+import {CurrencyConverterComponent} from './currency-converter/currency-converter.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/calculator', pathMatch: 'full'},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'feedback', component: FeedbackComponent},
   {path: 'reactive', component: ReactiveFormComponent},
   {path: 'finnkino', component: FinnkinoComponent},
+  {path: 'converter', component: CurrencyConverterComponent},
   {path: 'login', component: AuthComponent},
   {path: 'admin', component: AdminComponent},
   {path: '**', component: PageNotFoundComponent}
