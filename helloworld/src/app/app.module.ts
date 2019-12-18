@@ -9,7 +9,7 @@ import {
   MatCardModule, MatDialogModule, MatExpansionModule,
   MatFormFieldModule,
   MatGridListModule, MatIconModule,
-  MatInputModule, MatMenuModule, MatSidenavModule,
+  MatInputModule, MatMenuModule, MatSelectModule, MatSidenavModule,
   MatSliderModule,
   MatToolbarModule
 } from '@angular/material';
@@ -66,7 +66,8 @@ export interface DialogData {
     HttpClientModule,
     MatIconModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

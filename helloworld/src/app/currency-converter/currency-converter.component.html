@@ -1,3 +1,27 @@
-<p>
-  currency-converter works!
-</p>
+<mat-card>
+  <div class="converter-container">
+    <div class="selection-container">
+      <p>Mistä</p>
+      <mat-form-field>
+        <mat-select>
+          <mat-option *ngFor="let rate of currencies" value="{{rate}}" (click)="setBase(rate)">{{rate}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+    </div>
+    <div class="selection-container">
+      <p>Mihin</p>
+      <mat-form-field>
+        <mat-select>
+          <mat-option *ngFor="let rate of currencies" value="{{rate}}" (click)="setSymbol(rate)">{{rate}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button class="convert-button" (click)="getRates()">gettaa ratet</button>
+  </div>
+</mat-card>
