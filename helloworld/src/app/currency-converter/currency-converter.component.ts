@@ -10,18 +10,16 @@ import {Currency} from './currency';
 export class CurrencyConverterComponent implements OnInit {
   currency: Currency;
   currencies: string[];
-  rates: any;
   baseCurrency: string;
   newCurrency: string;
+  baseValue: number;
+  newValue: number;
 
   constructor(private currencyService: CurrencyConverterService) {
-    /* this.currencies = ['AUD', 'BGN', 'BRL', 'CAD', 'CHF', 'CNY', 'CZK', 'DKK', 'EUR', 'GBP', 'HKD', 'HRK', 'HUF',
-      'IDR', 'ILS', 'INR', 'ISK', 'JPY', 'KRW', 'MXN', 'MYR', 'NOK', 'NZD',
-      'PHP', 'PLN', 'RON', 'RUB', 'SEK', 'SGD', 'THB', 'TRY', 'USD', 'ZAR'
-     ]; */
   }
 
   ngOnInit() {
+    this.getCurrencies();
   }
 
   setBase(base) {
@@ -32,26 +30,23 @@ export class CurrencyConverterComponent implements OnInit {
     this.newCurrency = symbol;
   }
 
-  getRates() {
-    this.currencyService.getRates().subscribe(response => {
-      this.currency = response;
-      let currencies = JSON.stringify(this.currency.rates);
-      console.log(currencies);
+  getCurrencies() {
+    this.currencyService.getCurrencies().subscribe(response => {
+      this.currencies = Object.keys(response.rates);
+      this.currencies.unshift('EUR');
     });
   }
 
-  getRate() {
+  getRates() {
     this.currencyService.get(this.baseCurrency, this.newCurrency).subscribe(response => {
       this.currency = response;
-      // console.log(this.currency);
-      this.parseRate();
+      console.log(this.currency);
+      this.CalculateRate();
     });
   }
 
-  parseRate() {
-    let rateFinal: string;
-    rateFinal = JSON.stringify(this.currency.rates);
-    console.log(rateFinal);
-    console.log();
+  CalculateRate() {
+    const rate = Number(Object.values(this.currency.rates));
+    this.newValue = this.baseValue * rate;
   }
 }
