@@ -11,4 +11,6 @@
 
 .convert-button {
   height: 40px;
+  position: relative;
+  top: 50px;
 }

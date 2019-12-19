@@ -8,7 +8,7 @@
         </mat-select>
       </mat-form-field>
       <mat-form-field>
-        <input matInput>
+        <input matInput [(ngModel)]="baseValue">
       </mat-form-field>
     </div>
     <div class="selection-container">
@@ -19,7 +19,7 @@
         </mat-select>
       </mat-form-field>
       <mat-form-field>
-        <input matInput>
+        <input matInput [(ngModel)]="newValue" readonly>
       </mat-form-field>
     </div>
     <button mat-raised-button class="convert-button" (click)="getRates()">gettaa ratet</button>
