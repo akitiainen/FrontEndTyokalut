@@ -1,27 +1,33 @@
 <mat-card>
   <div class="converter-container">
-    <div class="selection-container">
+
+    <div class="oldcurrency-container">
       <p>Mistä</p>
       <mat-form-field>
-        <mat-select>
-          <mat-option *ngFor="let rate of currencies" value="{{rate}}" (click)="setBase(rate)">{{rate}}</mat-option>
+        <mat-select [(ngModel)]="baseCurrency" (ngModelChange)="getRates()">
+          <mat-option *ngFor="let rate of currencies" value="{{rate}}">{{rate}}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field>
-        <input matInput [(ngModel)]="baseValue">
+        <input matInput [(ngModel)]="baseValue" placeholder="Syötä määrä" type="number" (ngModelChange)="getRates()">
       </mat-form-field>
     </div>
-    <div class="selection-container">
+
+    <button mat-raised-button class="convert-button" (click)="swapCurrencies()">
+      <i class="material-icons">swap_horiz</i>
+    </button>
+
+    <div class="newcurrency-container">
       <p>Mihin</p>
       <mat-form-field>
-        <mat-select>
-          <mat-option *ngFor="let rate of currencies" value="{{rate}}" (click)="setSymbol(rate)">{{rate}}</mat-option>
+        <mat-select [(ngModel)]="newCurrency" (ngModelChange)="getRates()">
+          <mat-option *ngFor="let rate of currencies" value="{{rate}}">{{rate}}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field>
         <input matInput [(ngModel)]="newValue" readonly>
       </mat-form-field>
     </div>
-    <button mat-raised-button class="convert-button" (click)="getRates()">gettaa ratet</button>
+
   </div>
 </mat-card>
