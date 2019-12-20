@@ -1,6 +1,7 @@
 .background {
   padding: 3vh 10% 5%;
-  background-color: rgba(15, 15, 20, 0.7);
+  background-color: rgba(80, 80, 90, 0.7);
+  min-height: 100vh;
 }
 
 #title{
