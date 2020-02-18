@@ -12,10 +12,15 @@ export class FeedbackComponent implements OnInit {
   value: number;
 
   constructor(private questionService: QuestionsService) {
-    this.questions = this.questionService.getQuestions();
   }
 
   ngOnInit() {
+    this.questions = this.questionService.getQuestions();
+  }
+
+  onValueChange(event, question: Question) {
+    question.setFeedback(event.value);
+    console.log(event.value);
   }
 
 }
