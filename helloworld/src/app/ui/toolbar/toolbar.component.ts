@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
-import {MatDialog, MatMenuTrigger} from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
+import { MatMenuTrigger } from '@angular/material/menu';
 import {AuthComponent} from '../../auth/auth.component';
 
 @Component({

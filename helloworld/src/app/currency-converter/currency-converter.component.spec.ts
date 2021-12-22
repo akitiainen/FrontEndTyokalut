@@ -1,23 +1,24 @@
-import {ComponentFixture, TestBed, tick } from '@angular/core/testing';
+import {ComponentFixture, TestBed, inject } from '@angular/core/testing';
 
 import {CurrencyConverterComponent} from './currency-converter.component';
 import {AppModule} from '../app.module';
 import {CurrencyConverterService} from '../services/currency-converter.service';
 
-let comp: CurrencyConverterComponent;
-let fixture: ComponentFixture<CurrencyConverterComponent>;
-let currencyService: CurrencyConverterService;
+describe('WelcomeComponent (class only)', () => {
+  let comp: CurrencyConverterComponent;
+  let currService: CurrencyConverterService;
 
-describe('CurrencyConverterComponent', () => {
+  // @ts-ignore
   beforeEach(() => {
-    TestBed
-      .configureTestingModule({
-        imports: [
-          AppModule
-        ],
-        providers: [CurrencyConverterComponent,
-          {provide: CurrencyConverterService, useClass: CurrencyConverterService}]
-      });
+    TestBed.configureTestingModule({
+      // provide the component-under-test and dependent service
+      providers: [
+        CurrencyConverterComponent,
+        { provide: CurrencyConverterService, useClass: CurrencyConverterService }
+      ]
+    });
+    // inject both the component and the dependent service.
     comp = TestBed.inject(CurrencyConverterComponent);
+    currService = TestBed.inject(CurrencyConverterService);
   });
 });
