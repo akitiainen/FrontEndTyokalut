@@ -8,7 +8,6 @@ describe('WelcomeComponent (class only)', () => {
   let comp: CurrencyConverterComponent;
   let currService: CurrencyConverterService;
 
-  // @ts-ignore
   beforeEach(() => {
     TestBed.configureTestingModule({
       // provide the component-under-test and dependent service

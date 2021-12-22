@@ -10,7 +10,7 @@ import {News} from './news';
 })
 export class FinnkinoComponent implements OnInit {
   private news: News;
-  private cinemaData$: Observable<News[]>;
+  public cinemaData$: Observable<News[]>;
   searchTerm: any;
 
   constructor(private finnkinoService: FinnkinoService) { }
