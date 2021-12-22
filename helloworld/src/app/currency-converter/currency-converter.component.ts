@@ -29,7 +29,6 @@ export class CurrencyConverterComponent implements OnInit {
     this.currencyService.getCurrencies().subscribe(response => {
       this.currencies = Object.keys(response.rates);
       console.log(this.currencies);
-      this.currencies.unshift('EUR');
     });
   }
 

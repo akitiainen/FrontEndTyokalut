@@ -13,8 +13,8 @@ export class CurrencyConverterService {
   private url: string;
 
   constructor(private httpClient: HttpClient) {
-    this.url = 'https://api.exchangeratesapi.io/latest';
-    this.urlBase = 'https://api.exchangeratesapi.io/latest?base=';
+    this.url = 'https://api.exchangerate.host/latest';
+    this.urlBase = 'https://api.exchangerate.host/latest?base=';
     this.urlSymbol = '&symbols=';
   }
 
